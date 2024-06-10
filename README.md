@@ -1,8 +1,8 @@
 # semester_project.github.io
 index.html--登入
-  裡面要包含註冊頁面(register.html)的連結，忘記密碼的連結
+  裡面要包含註冊頁面(register.html)的連結，忘記密碼(getPassward)的連結
 register.html--註冊
-getpassward--忘記密碼
+getPassward--忘記密碼
 about.html--個人首頁
 equipmentList.html--查詢儀器
 reserve.html--預約介面

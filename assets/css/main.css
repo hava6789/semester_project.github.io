@@ -2257,6 +2257,8 @@ input[type=text]:placeholder {
 }
 
 .fadeIn.first {
+  font-size: large;
+  background-color: #56badd;
   -webkit-animation-delay: 0.4s;
   -moz-animation-delay: 0.4s;
   animation-delay: 0.4s;

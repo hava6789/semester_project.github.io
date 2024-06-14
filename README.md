@@ -22,3 +22,4 @@
         器材借出日、器材名稱、器材數量、借用者名稱、借用者單位、金額、繳費狀況、紀錄產生日、已借出已歸還的state
 
 icon的href: https://www.fju.edu.tw/images/favicon.ico
+個別頁面的title background-image: https://www.fju.edu.tw/showImg/subLabelImg/1_10_25_9.jpg

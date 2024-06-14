@@ -1,4 +1,3 @@
-<!-- 登入介面 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,13 +53,25 @@
           <li><a href="index.html" class="">登入<br></a></li>
           <li><a href="about.html">個人首頁</a></li>
           <li><a href="equipmentList.html">儀器列表</a></li>
+          <li><a href="payment.html">繳費</a></li>
           <li class="dropdown"><a href="reserve.html"><span>預約</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="reserve.html">預約首頁</a></li>
+              <li><a href="reserve.html">預約</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
               <li><a href="cancel.html">取消預約</a></li>
-              <li><a href="payment.html">繳費首頁</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
             </ul>
           </li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -72,61 +83,29 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade" style="background-image: url(https://www.fju.edu.tw/showImg/subLabelImg/1_10_25_9.jpg);">
+      <div class="container position-relative">
+        <h1>預約首頁</h1>
+        <p>預約後請記得繳費</p>
+      </div>
+    </div><!-- End Page Title -->
 
+    <!-- Starter Section Section -->
+    <section id="starter-section" class="starter-section section">
 
-          <div class="wrapper fadeInDown">
-            <div id="formContent">
-              <!-- Tabs Titles -->
-          
-            
-              <div class="fadeIn first">
-                帳號登入
-              </div>
-          
-              <!-- Login Form -->
-              <form>
-                <input type="text" id="login" class="fadeIn second" name="login" placeholder="帳號">
-                <input type="text" id="password" class="fadeIn third" name="login" placeholder="密碼">
-                <a class="underlineHover" href="#">忘記密碼?</a> <br>            
-                <input type="submit" class="fadeIn fourth" value="登入">
-                
-              </form>
-          
-              <!-- Remind Passowrd -->
-              <div id="formFooter">
-                <a class="underlineHover" href="register.htm">建立帳號</a>
-              </div>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Starter Section<br></span>
+        <h2>Starter Section</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
 
-
-
-          
-            </div>
-          </div>
-
-
-
-
-        </div>
+      <div class="container" data-aos="fade-up">
+        <p>Use this page as a starter for your own custom pages.</p>
       </div>
 
-    </section><!-- /Hero Section -->
-
-    <!-- Featured Services Section -->
-    <section id="featured-services" class="featured-services section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-         
-
-        </div>
-
-      </div>
-
-
+    </section><!-- /Starter Section Section -->
 
   </main>
 
@@ -210,7 +189,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <!--bootstrap cdn-->
 
 </body>
 

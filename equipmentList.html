@@ -8,14 +8,11 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="https://www.fju.edu.tw/images/favicon.ico" rel="icon">
-  <link href="https://www.fju.edu.tw/images/favicon.ico" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Favicons -->
+    <link href="https://www.fju.edu.tw/images/favicon.ico" rel="icon">
+    <link href="https://www.fju.edu.tw/images/favicon.ico" rel="apple-touch-icon">
+  
+  
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,19 +22,120 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+    <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Logis
-  * Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
-  * Updated: Jun 02 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <style>
+ 
+    .vertical-nav {
+      height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;
+        background-color: #343a40;
+        color: white;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+    }
+    .vertical-nav.collapsed {
+        transform: translateX(-200px);
+    }
+    .vertical-nav a {
+        color: white;
+        text-align: center;
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+    }
+    .vertical-nav a:hover {
+        background-color: #495057;
+    }
+    .main-content {
+        margin-left: 200px;
+        padding: 15px;
+        transition: margin-left 0.3s ease;
+    }
+    .main-content.collapsed {
+        margin-left: 0;
+    }
+    .toggle-button {
+        position: fixed;
+        top: 15px;
+        left: 0px;
+        z-index: 1001;
+        background-color: #343a40;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        transition: left 0.3s ease;
+    }
+    .toggle-button.collapsed {
+        left: 10px;
+    }
+    section {
+      padding: 50px 0;
+    }
+
+    .card {
+      background-color: rgb(239, 239, 239);
+      width: 100%; 
+      max-width: 200px; 
+      height: 200px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border: none;
+ 
+   
+    } 
+
+    .card .card-img-top {
+      height: 100px; 
+      width: 150px;
+      object-fit: cover;
+      border-radius: 0.25rem 0.25rem 0 0;
+      padding: 10px ; 
+      padding-left: 50px;
+    }
+  
+    .card-body {
+      padding: 8px;
+    }
+    .card-title {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+    .card-text {
+      font-size: 0.8rem;
+      color: #666;
+    }
+    .btn {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.7rem;
+    }
+
+@media (min-width: 768px) {    
+    .custom-col {
+              flex: 0 0 calc(20% - 20px); 
+              max-width: calc(20% - 20px); 
+              padding: 0 10px; 
+              box-sizing: border-box; 
+            }
+          }
+</style>
+
+
 </head>
 
-<body>
+<body >
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
@@ -70,417 +168,518 @@
   </header>
 
   <main class="main">
-
+   
     <!-- Page Title -->
-    <div class="page-title" data-aos="fade" style="background-image: url(assets/img/page-title-bg.jpg);">
-      <div class="container position-relative">
-        <h1>Services</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Services</li>
-          </ol>
-        </nav>
+    <div class="page-title" data-aos="fade" style="background-image: url('輔大圖片.jpg');">
+
+        <div class="input-group d-flex justify-content-center align-items-center">
+          <h2 class="m-0 me-3">儀器名稱查詢</h2>
+          <div class="form-outline m-0">
+            <input id="search-input" type="search" class="form-control" aria-label="Search" aria-labelledby="search-label" placeholder="輸入關鍵字...">
+          </div>
+          <button id="search-button" type="button" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Featured Services Section -->
-    <section id="featured-services" class="featured-services section">
+    <button class="toggle-button btn btn-primary" id="toggleButton"><i class="bi bi-border-width"></i></button>
+    <div class="vertical-nav collapsed" id="verticalNav">
+      <a href="#art">藝術學院</a>
+      <a href="#educate">教育學院</a>
+      <a href="#medical">醫學院</a>
+      <a href="#engineering">理工學院</a>
+      <a href="#life">民生學院</a>
+      <a href="#clothing">織品服裝學院</a>
+    </div>
 
-      <div class="container">
+    <div class="main-content collapsed" id="mainContent">
+      <section id="art">
+        <div class="container mt-5">
 
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon flex-shrink-0"><i class="fa-solid fa-cart-flatbed"></i></div>
-            <div>
-              <h4 class="title">Lorem Ipsum</h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-              <a href="#" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-          <!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon flex-shrink-0"><i class="fa-solid fa-truck"></i></div>
-            <div>
-              <h4 class="title">Dolor Sitema</h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-              <a href="#" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon flex-shrink-0"><i class="fa-solid fa-truck-ramp-box"></i></div>
-            <div>
-              <h4 class="title">Sed ut perspiciatis</h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-              <a href="#" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
+      <div class="row g-3">
+        <h4>藝術學院</h4>
+    
+    <div class="col-md-3 custom-col">
+      <div class="card">
+        <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/1_0.jpg?itok=Xhq_v26c" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><a href="./equipmentlist/e1.html">Nuage數位多媒體整合系統</a></h5>
+          <p class="card-text">聯絡人：廖紘億 分機2377    
+            <a href="mailto:092029@mail.fju.edu.tw">092029@mail.fju.edu.tw</a>
+          </p>
 
         </div>
-
       </div>
+    </div>
 
-    </section><!-- /Featured Services Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Our Services<br></span>
-        <h2>Our ServiceS</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/service-1.jpg" alt="" class="img-fluid">
-              </div>
-              <h3>Storage</h3>
-              <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam repellendus temporibus itaqueofficiis odit</p>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/service-2.jpg" alt="" class="img-fluid">
-              </div>
-              <h3><a href="#" class="stretched-link">Logistics</a></h3>
-              <p>Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et iure incidunt molestiae dolor ipsam ducimus occaecati nisi</p>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/service-3.jpg" alt="" class="img-fluid">
-              </div>
-              <h3><a href="#" class="stretched-link">Cargo</a></h3>
-              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/service-4.jpg" alt="" class="img-fluid">
-              </div>
-              <h3><a href="#" class="stretched-link">Trucking</a></h3>
-              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/service-5.jpg" alt="" class="img-fluid">
-              </div>
-              <h3>Packaging</h3>
-              <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel cum onsequuntur maiores beatae consequatur magni voluptates</p>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/service-6.jpg" alt="" class="img-fluid">
-              </div>
-              <h3><a href="#" class="stretched-link">Warehousing</a></h3>
-              <p>Quas assumenda non occaecati molestiae. In aut earum sed natus eatae in vero. Ab modi quisquam aut nostrum unde et qui est non quo nulla</p>
-            </div>
-          </div><!-- End Card Item -->
-
+    
+    <div class="col-md-3 custom-col">
+      <div class="card">
+        <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/IMG_9173.JPG?itok=-7TpdUTZ" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/equipmentlist/e1.html">史坦威鋼琴</a></h5>
+          <p class="card-text">聯絡人： 廖紘億 分機2377
+            <a href="mailto:092029@mail.fju.edu.tw">092029@mail.fju.edu.tw</a></p>
         </div>
-
       </div>
+    </div>
 
-    </section><!-- /Services Section -->
-
-    <!-- Features Section -->
-    <section id="features" class="features section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Features</span>
-        <h2>Features</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
-            <img src="assets/img/features-1.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="bi bi-check"></i><span> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check"></i> <span>Ullam est qui quos consequatur eos accusamus.</span></li>
-            </ul>
-          </div>
-        </div><!-- Features Item -->
-
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/features-2.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-            <h3>Corporis temporibus maiores provident</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div><!-- Features Item -->
-
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
-            <img src="assets/img/features-3.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7" data-aos="fade-up">
-            <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
-            <ul>
-              <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad fugiat</span>.</li>
-            </ul>
-          </div>
-        </div><!-- Features Item -->
-
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
-            <img src="assets/img/features-4.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
-            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div><!-- Features Item -->
-
-      </div>
-
-    </section><!-- /Features Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
-      <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
+   
+    <div class="col-md-3 custom-col">
+      <div class="card">
+        <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E8%B2%A1%E7%94%A2%E5%A4%96%E8%A7%80.jpg?itok=Ya5MH5nv" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/equtpmentlist/e1.html">大圖掃圖機</a></h5>
+          <p class="card-text">聯絡人： 黃美娟 分機2392
+            <a href="mailto:050946@mail.fju.edu.tw">050946@mail.fju.edu.tw</a></p>
         </div>
-
       </div>
-
-    </section><!-- /Testimonials Section -->
-
-    <!-- Faq Section -->
-    <section id="faq" class="faq section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Frequently Asked Questions</span>
-        <h2>Frequently Asked Questions</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row justify-content-center">
-
-          <div class="col-lg-10">
-
-            <div class="faq-container">
-
-              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-                <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h3>
-                <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-            </div>
-
-          </div>
-
+</section></div>
+<div class="main-content collapsed" id="mainContent">
+  <section id="educate">
+    <div class="container mt-5">
+      <h4>教育學院</h4>
+      <div class="row g-3">
+        <div class="col-md-3 custom-col">
+      <div class="card">
+        <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E5%8A%A0%E5%A3%93%E5%86%B7%E7%99%82%E6%81%A2%E5%BE%A9%E6%A9%9F.jpg?itok=2vAcG1Ge" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/equipmentlist/e1.html">加壓冷療恢復機</a></h5>
+          <p class="card-text">聯絡人： 張耘齊
+            <a href="mailto:142498@mail.fju.edu.tw">142498@mail.fju.edu.tw</a></p>
         </div>
+      </div>
+    </div>
+    <div class="col-md-3 custom-col">
+      <div class="card">
+        <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E6%94%9C%E5%B8%B6%E5%BC%8F%E8%83%BD%E9%87%8F%E4%BB%A3%E8%AC%9D%E7%B3%BB%E7%B5%B1.jpg?itok=fL_wicWm" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/equipmentlist/e1.html">攜帶式能量代謝系統</a></h5>
+          <p class="card-text">聯絡人： 陳譽仁 分機2397
+            <a href="mailto:142270@mail.fju.edu.tw">142270@mail.fju.edu.tw</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 custom-col">
+      <div class="card">
+        <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E6%B8%AC%E5%8A%9B%E6%9D%BF.jpg?itok=w_lm9Qyn" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/equipmentlist/e1.html">測力板</a></h5>
+          <p class="card-text">聯絡人： 陳譽仁 分機2397
+            <a href="mailto:142270@mail.fju.edu.tw">142270@mail.fju.edu.tw</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 custom-col">
+      <div class="card">
+        <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/1_4.jpg?itok=WiTXde6F" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/equipmentlist/e1.html">等速肌力測試評估儀</a></h5>
+          <p class="card-text">聯絡人： 陳譽仁 分機2397
+            <a href="mailto:142270@mail.fju.edu.tw">142270@mail.fju.edu.tw</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 custom-col">
+      <div class="card">
+        <img src="" class="card-img-top" alt="尚無照片">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/equipmentlist/e1.html">高精度無線腦波系統</a></h5>
+          <p class="card-text">聯絡人： 林建勳 分機2397
+            <a href="mailto: 062239@mail.fju.edu.tw "> 062239@mail.fju.edu.tw</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>  
+</div>  
+<div class="main-content collapsed" id="mainContent">
+  <section id="medical">
+    <div class="container mt-5">
+      <h4>醫學院</h4>
+      <div class="row">
+        <div class="col-md-3 custom-col">
+
+        <div class="card ">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/1_3.jpg?itok=OC2UwoxR" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">ImageXpress Micro 高內含影像分析系統</a></h5>
+            <p class="card-text">聯絡人： 林瑜雯 分機2068
+              <a href="mailto:056416@mail.fju.edu.tw">056416@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+  
+   
+      <div class="col-md-4 custom-col">
+        <div class="card ">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/Luminex%20200%E5%A4%9A%E5%8A%9F%E8%83%BD%E8%9E%A2%E5%85%89%E7%94%9F%E7%89%A9%E5%88%86%E5%AD%90%E5%A4%9A%E9%87%8D%E5%88%86%E6%9E%90%E7%B3%BB%E7%B5%B1.jpg?itok=RWn4bdNs" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">Luminex 200多功能螢光生物分子多重分析系統</a></h5>
+            <p class="card-text">聯絡人： 湯永茂 分機3493
+              <a href="mailto:073684@mail.fju.edu.tw">073684@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 custom-col">
+        <div class="card ">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E5%85%A8%E6%96%B9%E4%BD%8D%E6%99%BA%E6%85%A7%E5%9E%8B%E9%9B%BB%E6%B5%81%E8%BC%B8%E5%87%BA%E9%9B%BB%E8%BD%89%E6%AE%96%E5%84%80_1.JPG?itok=5OYN069O" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">全方位智慧型電流輸出電轉殖儀</a></h5>
+            <p class="card-text">聯絡人： 林盈宏 分機3399
+              <a href="mailto:084952@mail.fju.edu.tw">084952@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 custom-col">
+        <div class="card ">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E6%95%99%E6%95%B4%E6%AC%BE%E8%A8%AD%E5%82%99%E8%B3%87%E6%96%99_%E9%A0%81%E9%9D%A2_1.jpg?itok=XUr0uf79" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">動物學習與記憶測試組</a></h5>
+            <p class="card-text">聯絡人： 湯永茂 分機3493
+              <a href="mailto:073684@mail.fju.edu.tw">073684@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+  
+ 
+
+  
+      <div class="col-md-3 custom-col">
+        <div class="card ">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E8%B2%A1%E7%94%A2%E5%A4%96%E8%A7%80_0.jpg?itok=XFL6EKTd" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">呼吸模擬器組  </a></h5>
+            <p class="card-text">聯絡人： 楊式興老師 分機2045
+              <a href="mailto:075147@mail.fju.edu.tw">075147@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-3 custom-col">
+        <div class="card ">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E5%BE%AE%E6%B5%81%E9%AB%94%E9%9B%BB%E6%B3%B3%E5%88%86%E6%9E%90%E5%84%80.jpg?itok=TdyVy_68" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">微流體電泳分析儀</a></h5>
+            <p class="card-text">聯絡人： 林麗如 分機6391     
+              <a href="mailto:fj03672@mail.fju.edu.tw">fj03672@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 custom-col">
+        <div class="card ">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E5%BE%AE%E9%9B%BB%E6%A5%B5%E9%99%A3%E5%88%97%E9%9B%BB%E7%94%9F%E7%90%86%E7%B3%BB%E7%B5%B1-%E8%B2%A1%E7%94%A2%E5%A4%96%E8%A7%80%E3%80%81%E6%A8%99%E7%B1%A4.jpg?itok=lE1kDUHd" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">微電極陣列電生理系統</a></h5>
+            <p class="card-text">聯絡人： 湯永茂 分機3493
+              <a href="mailto:092029@mail.fju.edu.tw">073684@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 custom-col">
+        <div class="card ">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/3%E6%88%90%E4%BA%BA%E5%85%A8%E5%8A%9F%E8%83%BD%E5%9E%8B%E5%91%BC%E5%90%B8%E5%99%A8.jpg?itok=c7SOtQD5" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">成人全功能型呼吸器</a></h5>
+            <p class="card-text">聯絡人： 楊式興，分機2045；陳碧春，分機2043
+               <a href="mailto:075147@mail.fju.edu.tw">075147@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+  
+
+
+  
+      <div class="col-md-3 custom-col">
+        <div class="card ">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E6%AC%A1%E4%B8%96%E4%BB%A3%E9%AB%98%E9%80%9A%E9%87%8F%E6%A0%B8%E9%85%B8%E5%AE%9A%E5%BA%8F%E7%B3%BB%E7%B5%B1.jpg?itok=ef7ji-mk" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">次世代高通量核酸定序系統(超高速半導體基因定序儀)</a></h5>
+            <p class="card-text">聯絡人： 林麗如
+              <a href="mailto:fj03672@mail.fju.edu.tw">fj03672@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+  
+   
+      <div class="col-md-3 custom-col">
+        <div class="card ">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/22%E7%A9%BF%E9%80%8F%E5%BC%8F%E9%9B%BB%E5%AD%90%E9%A1%AF%E5%BE%AE%E9%8F%A1.JPG?itok=ypS4Cp1x" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">穿透式電子顯微鏡</a></h5>
+            <p class="card-text">聯絡人： 吳彥陞，分機2092
+              <a href="mailto:092029@mail.fju.edu.tw">fj02390@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 custom-col">
+        <div class="card ">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E8%A1%80%E7%AE%A1%E9%A1%AF%E5%BE%AE%E5%BD%B1%E5%83%8F%E8%A7%80%E5%AF%9F%E7%B4%80%E9%8C%84%E7%B3%BB%E7%B5%B1-%E8%B2%A1%E7%94%A2%E5%A4%96%E8%A7%80%E3%80%81%E6%A8%99%E7%B1%A4.jpg?itok=j1KGg7IX" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">血管顯微影像觀察紀錄系統</a></h5>
+            <p class="card-text">聯絡人： 湯永茂 分機3493
+              <a href="mailto:092029@mail.fju.edu.tw">073684@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 custom-col">
+        <div class="card ">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/21%E9%AB%98%E9%80%9F%E6%B5%81%E5%BC%8F%E7%B4%B0%E8%83%9E%E5%88%86%E9%81%B8%E5%84%80.JPG?itok=VBcjtUex" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">高速流式細胞分選儀</a></h5>
+            <p class="card-text">聯絡人： 吳彥陞，分機2092
+              <a href="mailto:fj02390@mail.fju.edu.tw">fj02390@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div></section></div>
+
+      <div class="main-content collapsed" id="mainContent">
+        <section id="engineering">
+          <div class="container mt-5">
+    <h4>理工學院</h4>
+    <div class="row">
+      <div class="col-md-3 custom-col">
+        <div class="card mb-3">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E4%B8%89%E7%B6%AD%E7%94%9F%E7%89%A9%E5%88%97%E5%8D%B0%E6%A9%9F.jpg?itok=LczmvX6f" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">三維生物列印機</a></h5>
+            <p class="card-text">聯絡人： 劉席瑋
+              <a href="mailto:079336@mail.fju.edu.tw">079336@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+  
+   
+      <div class="col-md-3 custom-col">
+        <div class="card mb-3">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E8%B2%A1%E7%94%A2%E5%A4%96%E8%A7%80_1.jpg?itok=K1RpD9B4" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">動態機械性質分析儀</a></h5>
+            <p class="card-text">聯絡人： 曾勝國 分機2484
+              <a href="mailto:083764@mail.fju.edu.tw">083764@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 custom-col">
+        <div class="card mb-3">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E5%8E%9F%E5%AD%90%E6%94%BE%E5%85%89%E5%85%89%E8%AD%9C%E5%84%80%E5%84%80%E5%99%A8%E5%A4%96%E8%A7%80.jpeg?itok=gjxR6hJQ" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">原子放光光譜儀</a></h5>
+            <p class="card-text">聯絡人： 曾勝國 分機2484
+              <a href="mailto:083764@mail.fju.edu.tw">083764@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 custom-col">
+        <div class="card mb-3">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E5%BE%AE%E6%B3%A2%E6%B6%88%E5%8C%96%E7%B3%BB%E7%B5%B1%E8%B2%A1%E7%94%A2%E5%A4%96%E8%A7%80.jpg?itok=1h4DuPGR" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">多模式微波反應系統</a></h5>
+            <p class="card-text">聯絡人： 陳怡如 分機3568
+              <a href="mailto:013840@mail.fju.edu.tw">013840@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+  
+
+  
+      <div class="col-md-3 custom-col">
+        <div class="card mb-3">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E5%BD%B1%E5%83%8F%E8%BD%89%E6%AA%94%E5%88%86%E6%9E%90%E8%BB%9F%E9%AB%94%E3%80%81%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E8%BB%9F%E9%AB%94.png?itok=80ofGAye" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">影像轉檔分析軟體、逆向工程軟體</a></h5>
+            <p class="card-text">聯絡人： 林沛蓉
+             <a href="mailto:079336@mail.fju.edu.tw">079336@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-3 custom-col">
+        <div class="card mb-3">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/24%E6%8B%89%E6%9B%BC%E7%B3%BB%E7%B5%B1.jpg?itok=ivOn9cwO" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">拉曼系統</a></h5>
+            <p class="card-text">聯絡人： 杜繼舜，分機2146/3560
+              <a href="mailto:092029@mail.fju.edu.tw">039611@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 custom-col">
+        <div class="card mb-3">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/9%E6%AF%9B%E7%B4%B0%E7%AE%A1%E9%9B%BB%E6%B3%B3%E5%84%80.JPG?itok=PuzaA8Wf" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">毛細管電泳儀</a></h5>
+            <p class="card-text">聯絡人： 陳怡如，分機3568
+              <a href="mailto:013840@mail.fju.edu.tw">013840@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 custom-col">
+        <div class="card mb-3">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E7%9B%B8%E8%B3%AA%E9%87%8F%E9%81%B8%E6%93%87%E5%81%B5%E6%B8%AC%E5%99%A8%E5%84%80%E5%99%A8%E5%A4%96%E8%A7%80.jpg?itok=OnkIZHSV" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html"> 氣相質量選擇偵測器</a></h5>
+            <p class="card-text">聯絡人： 曾勝國 分機2484
+              
+              <a href="mailto:083764@mail.fju.edu.tw">083764@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+  
+  
+      <div class="col-md-3 custom-col">
+        <div class="card mb-3">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/4%E6%B5%81%E5%BC%8F%E7%B4%B0%E8%83%9E%E5%84%80.JPG?itok=RZgvcwtA" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">流式細胞儀</a></h5>
+            <p class="card-text">聯絡人： 周秀慧，分機3712
+              <a href="mailto:047751@mail.fju.edu.tw">047751@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+  
+     
+      <div class="col-md-3 custom-col">
+        <div class="card mb-3">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E5%A4%96%E8%A7%80.jpg?itok=ALyInaeO" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">流式細胞分析儀</a></h5>
+            <p class="card-text">聯絡人： 周秀慧老師 分機3712
+              <a href="mailto:047751@mail.fju.edu.tw">047751@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 custom-col">
+        <div class="card mb-3">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/1.jpg?itok=9vY0GyFv" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">雷射掃描共軛焦分光光譜顯微平台</a></h5>
+            <p class="card-text">聯絡人： 周秀慧 分機3712
+              <a href="mailto:047751@mail.fju.edu.tw">047751@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 custom-col">
+        <div class="card mb-3">
+          <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/27%E9%AB%98%E9%9A%8E%E6%95%B8%E4%BD%8D%E7%A4%BA%E6%B3%A2%E5%99%A8.JPG?itok=tc3Je5xE" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/equipmentlist/e1.html">高階數位示波器</a></h5>
+            <p class="card-text">聯絡人： 盛鐸，分機3800
+              <a href="mailto:082408@mail.fju.edu.tw">082408@mail.fju.edu.tw</a></p>
+          </div>
+        </div>
+      </div></div></section></div>
+
+      <div class="main-content collapsed" id="mainContent">
+        <section id="life">
+          <div class="container mt-5">
+    <h4>民生學院</h4>
+    <div class="row">
+    <div class="col-md-3 custom-col">
+      <div class="card">
+        <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/17ST-5%E6%B5%81%E5%8B%95%E5%B1%A4%E9%80%86%E6%B4%97%E5%BC%8F%E5%99%B4%E9%9C%A7%E4%B9%BE%E7%87%A5%E9%80%A0%E7%B2%92%E6%A9%9F.JPG?itok=0aJjDh_J" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/equipmentlist/e1.html">ST-5流動層逆洗式噴霧乾燥造粒機</a></h5>
+          <p class="card-text">聯絡人： 郭孟怡 ，2019
+            <a href="mailto:062998@mail.fju.edu.tw">062998@mail.fju.edu.tw</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 custom-col">
+      <div class="card">
+        <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E5%A4%9A%E8%89%B2%E8%9E%A2%E5%85%89%E8%88%87%E5%86%B7%E5%85%89%E5%BD%B1%E5%83%8F%E7%B3%BB%E7%B5%B1.jpg?itok=zzG_eJe6" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/equipmentlist/e1.html">多色螢光與冷光影像系統</a></h5>
+          <p class="card-text">聯絡人： 詹雅雯 分機3710 
+            <a href="mailto:052063 @mail.fju.edu.tw">052063 @mail.fju.edu.tw</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 custom-col">
+      <div class="card">
+        <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E6%A1%8C%E4%B8%8A%E5%9E%8B%E6%8E%83%E6%8F%8F%E9%9B%BB%E5%AD%90%E9%A1%AF%E5%BE%AE%E9%8F%A1.jpg?itok=wwvZfIvN" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/equipmentlist/e1.html">桌上型掃描電子顯微鏡</a></h5>
+          <p class="card-text">聯絡人： 董佳欣
+            <a href="mailto:013831@mail.fju.edu.tw">013831@mail.fju.edu.tw</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 custom-col">
+      <div class="card">
+        <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/1_1.jpg?itok=pCoI_9Ud" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/equipmentlist/e1.html">聚合酶連鎖反應分析儀</a></h5>
+          <p class="card-text">聯絡人： 劉奕方老師 分機3613
+            <a href="mailto:070647@mail.fju.edu.tw">070647@mail.fju.edu.tw</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 custom-col">
+      <div class="card">
+        <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E8%B1%86%E8%85%90%E7%B3%BB%E7%B5%B1%E8%A3%BD%E9%80%A0%E8%A8%AD%E5%82%99.png?itok=-RjshXML" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/equipmentlist/e1.html">豆腐系統製造設備（含包裝）</a></h5>
+          <p class="card-text">聯絡人： 曾國良 分機2513
+            <a href="mailto:015053@mail.fju.edu.tw">015053@mail.fju.edu.tw</a></p>
+        </div>
+      </div>
+    </div></div></section></div></div><br>
+    <div class="main-content collapsed" id="mainContent">
+      <section id="clothing">  
+        <div class="container mt-5"> 
+      <h4>織品服裝學院</h4>
+      <div class="row g-5">
+
+  <div class="col-md-3 custom-col">
+    <div class="card">
+      <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/%E6%B6%B2%E6%85%8B%E6%B0%B4%E5%88%86%E7%AE%A1%E7%90%86%E6%B8%AC%E8%A9%A6%E5%84%80.jpg?itok=UfYluXzB" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><a href="/equtpmentlist/e1.html">液態水分管理測試儀</a></h5>
+        <p class="card-text">聯絡人： 姚雯韻
+            <a href="mailto:0013972@mail.fju.edu.tw">013972@mail.fju.edu.tw</a>
+        </p>
 
       </div>
+    </div>
+  </div>
 
-    </section><!-- /Faq Section -->
+
+  <div class="col-md-3 custom-col">
+    <div class="card">
+      <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/3%20%E9%9B%BB%E8%85%A6%E8%87%AA%E5%8B%95%E6%A9%AB%E7%B7%A8%E6%A9%9F.jpg?itok=udaQtGop" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><a href="/equipmentlist/e1.html">電腦輔助橫編機設計系統</a></h5>
+        <p class="card-text">聯絡人： 吳惠櫻 分機3634
+           <a href="mailto:084648@mail.fju.edu.tw">084648@mail.fju.edu.tw</a></p>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="col-md-3 custom-col">
+    <div class="card">
+      <img src="http://www.rdo.fju.edu.tw/sites/default/files/styles/galleryformatter_thumb/public/1_2.jpg?itok=nbK_2_hM" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><a href="/equtpmentlist/e1.html">電腦鞋面橫編機設計系統</a></h5>
+        <p class="card-text">聯絡人： 吳惠櫻 分機3634
+          <a href="mailto:084648@mail.fju.edu.tw">084648@mail.fju.edu.tw</a></p>
+      </div>
+    </div>
+  </div>
+    </div>
+</div>
+</section>    
+      </div>
+    </div>
+</div>
 
   </main>
 
   <footer id="footer" class="footer">
-
+  
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
@@ -489,13 +688,13 @@
           </a>
           <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
-
+  
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
@@ -506,7 +705,7 @@
             <li><a href="#">Privacy policy</a></li>
           </ul>
         </div>
-
+  
         <div class="col-lg-2 col-6 footer-links">
           <h4>Our Services</h4>
           <ul>
@@ -517,7 +716,7 @@
             <li><a href="#">Graphic Design</a></li>
           </ul>
         </div>
-
+  
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
           <p>A108 Adam Street</p>
@@ -526,10 +725,10 @@
           <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
           <p><strong>Email:</strong> <span>info@example.com</span></p>
         </div>
-
+  
       </div>
     </div>
-
+  
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Logis</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
@@ -540,15 +739,15 @@
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-
+  
   </footer>
-
+  
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
+  
   <!-- Preloader -->
   <div id="preloader"></div>
-
+  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -556,9 +755,21 @@
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
+  
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Custom JS for Toggle -->
+  <script>
+    document.getElementById('toggleButton').addEventListener('click', function() {
+      var nav = document.getElementById('verticalNav');
+      var content = document.getElementById('mainContent');
+      var button = document.getElementById('toggleButton');
+      nav.classList.toggle('collapsed');
+      content.classList.toggle('collapsed');
+      button.classList.toggle('collapsed');
+    });
+  </script>
 
 </body>
 

@@ -46,25 +46,83 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 	<style>
+		/* 手機版 */
 		@media(max-width:768px) {
 			#sitename {
 				font-size: larger;
 			}
-
+			#reserveForm{
+				display: grid;
+				grid-template-columns: 1fr;
+				row-gap: 10px;
+			}
+			.FormInsideWrapper{	
+				display: grid;
+				grid-template-columns: 1fr 3fr;
+				column-gap: 10px;
+				
+				align-items:normal;
+			}
+			.FormInsideWrapper > div{
+				column-gap: 20px;
+				width: 100%;
+			}
+			#reserveForm label{
+				text-align: right;
+			}
+			#reserveForm input, #reserveForm select{
+				width: 90%;
+				
+			}
+			.ui-selectmenu-button.ui-button {
+				text-align: left;
+				white-space: nowrap;
+				width: 90%;
+			}
+		}
+		
+		/* 電腦版 */
+		@media(min-width:768px){
+			#reserveForm{
+				width: 80%;
+				grid-template-columns: 1fr 1fr;
+				row-gap: 10px;
+			}
+			.FormInsideWrapper{
+				display: grid;
+				grid-template-columns: 1fr 3fr;
+				column-gap: 10px;
+				align-items:normal;
+			}
+			.FormInsideWrapper > div{
+				column-gap: 20px;
+				width: 100%;
+			}
+			#reserveForm label{
+				text-align: right;
+			}
+			#reserveForm input, #reserveForm select{
+				width: 90%;
+			}
+			.ui-selectmenu-button.ui-button {
+				text-align: left;
+				white-space: nowrap;
+				width: 90%;
+			}
 		}
 		#reserveForm{
 			display: grid;
-			grid-template-columns: 1fr 1fr;
-			column-gap: 10px;
-			padding: 5%;
-		}		
-		#reserveForm > input{
-			width: 90%;
+			align-self: center;
+			justify-self: center;
+			
 		}
-		#FormInsideWrapper{
-			display: grid;
-			grid-template-columns: 3fr 7fr;
+		input,select{
+			padding-left: 20px;
+			border: 1px gray solid;
+			border-radius: 3px;
+			height: auto;
 		}
+		
 	</style>
 	<script>
 		$(function () {
@@ -106,7 +164,7 @@
 		</div>
 	</header>
 
-	<main class="main">
+	<main class="main" style="display: grid;">
 
 		<!-- Page Title -->
 		<div class="page-title" data-aos="fade"
@@ -118,30 +176,53 @@
 		</div><!-- End Page Title -->
 
 		<!-- Starter Section Section -->
-		<section id="starter-section" class="starter-section section">
+		<section id="starter-section" class="starter-section section" style="display: grid;">
 
-			<!-- Section Title -->
-			<div class="container section-title" data-aos="fade-up">
-				<span>Starter Section<br></span>
-				<h2>Hello world!</h2>
-				<p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-			</div><!-- End Section Title -->
-
-			<div class="container" data-aos="fade-up">
-				<p>Use this page as a starter for your own custom pages.</p>
-			</div>
-
-			<form id="reserveForm" class="container ">
-				<div class="FormInsideWrapper">
-					<p style="text-align: right;">日期 : </p>
-					<input type="date" name="date">					
+			<form  style="display: grid;">
+				<div id="reserveForm">
+					<div class="FormInsideWrapper">
+						<label>借出日期 : </label>
+						<div>
+							<input type="date" name="borrowDate" required >
+						</div>		
+					</div>
+					<div class="FormInsideWrapper">
+						<label>借出時間 : </label>
+						<div>
+							<input type="time" name="borrowTime"  step="3600000" value="09:00" min="09:00" max="16:00" required/>
+						</div>
+					</div>
+					<div class="FormInsideWrapper">
+						<label>歸還日期 : </label>
+						<div>
+							<input type="date" name="returnDate" required >
+						</div>		
+					</div>
+					<div class="FormInsideWrapper">
+						<label>歸還時間 : </label>
+						<div>
+							<input type="time" name="returnTime" step="3600" value="09:00" min="09:00" max="16:00" required/>
+						</div>
+					</div>
+					<div class="FormInsideWrapper">
+						<label>儀器名稱 : </label>
+						<div>
+							<select name="equipmentName" id="equipmentName">
+								<option>1</option>
+								<option>2</option>
+							</select>
+						</div>
+					</div>
+					<div class="FormInsideWrapper">
+						<label>數量 : </label>
+						<div>
+							<input type="number" min="1" max="5" step="1" value="1"  required/>
+						</div>
+					</div>
+					
 				</div>
-				<div class="FormInsideWrapper">
-					<p style="text-align: right;">儀器名稱 : </p>
-					<select name="equipmentName" id="equipmentName">
-						<option>1</option>
-						<option>2</option>
-					</select>					
+				<div style="align-self: center;justify-self: center; column-span: 2; margin-top: 20px;" >
+					<input type="submit" value="提交表單" style="width: fit-content;"/>
 				</div>
 				
 			</form>

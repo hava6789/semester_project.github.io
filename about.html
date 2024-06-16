@@ -104,7 +104,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="get-a-quote.html">Get a Quote</a>
+
 
     </div>
   </header>
@@ -120,39 +120,47 @@
 
 
 <div id="appointmentTable">
-    <h4>預約記錄查詢</h4>
-  <table>
-    <thead>
-      <tr>
-        <th>預約日期</th>
-        <th>項目</th>
-        <th>時間</th>
-        <th>操作</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>
-          <a href="cancel.html" class="btn delete-btn">刪除</a>
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>
-          <a href="cancel.html" class="btn delete-btn">刪除</a>
-        </td>
-      </tr>
-      <!-- 更多預約記錄行 -->
-    </tbody>
-  </table>
+    <h4>預約記錄查詢</h4><br>
+    <div class="container" data-aos="fade-up">
+      <table id="myTable"  class="stripe row-border order-column nowrap" width="100%">
+        <thead>
+          <td></td>
+          <td>預約記錄發生日</td>
+          <td>借出日期</td>
+          <td>借出時間</td>
+          <td>歸還日期</td>
+          <td>歸還時間</td>
+          <td>預約儀器名稱</td>
+          <td>數量</td>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>2024-6-16</td>
+            <td>2024-6-20</td>
+            <td>09:00</td>
+            <td>2024-6-27</td>
+            <td>16:00</td>
+            <td>史坦威鋼琴</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>2024-6-06</td>
+            <td>2024-6-24</td>
+            <td>10:00</td>
+            <td>2024-7-3</td>
+            <td>15:00</td>
+            <td>微流體電泳分析儀</td>
+            <td>1</td>
+          </tr>
+
+        </tbody>
+      </table>
 </div>
 
 <div style="text-align: center;">
+  <a href="cancel.html" class="btn delete-btn">取消預約</a>
   <a href="payment.html" class="btn" id="paymentLink">進入繳費介面</a>
   <a href="equipmentList.html" class="btn" id="instrumentLink">查詢儀器</a>
 </div>
@@ -161,7 +169,7 @@
 
   </main>
 
- <footer id="footer" class="footer">
+  <footer id="footer" class="footer">
 
     <div class="container footer-top">
       <div class="row gy-4">

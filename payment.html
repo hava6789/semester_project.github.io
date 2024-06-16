@@ -37,8 +37,8 @@
 	<link href="assets/css/main.css" rel="stylesheet">
 
 	<!-- datatable -->
-	<link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/5.0.1/css/fixedColumns.dataTables.css"/>
-	<link rel="stylesheet" href="https://cdn.datatables.net/select/2.0.3/css/select.dataTables.css"/>    
+	<link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/5.0.1/css/fixedColumns.dataTables.css" />
+	<link rel="stylesheet" href="https://cdn.datatables.net/select/2.0.3/css/select.dataTables.css" />
 	<link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
 	<script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
 	<script src="https://cdn.datatables.net/fixedcolumns/5.0.1/js/dataTables.fixedColumns.js"></script>
@@ -53,11 +53,26 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+	<style>
+		button {
+			background-color: cadetblue;
+			border: 1px gray solid;
+			color: aliceblue;
+			position: relative;
+			justify-self: center;
+			width: 100px;
+			border-radius: 3px;
+			margin: 20px;
+		}
+		body * {
+			font-family: '微軟正黑體';
+		}
+	</style>
 </head>
 
 <body>
 	<script>
-		$(document).ready(function(){
+		$(document).ready(function () {
 			new DataTable('#myTable', {
 				columnDefs: [
 					{
@@ -74,12 +89,12 @@
 				scrollCollapse: true,
 				scrollX: true,
 				scrollY: 300,
-				searching:false,
-				info:false,
+				searching: false,
+				info: false,
 				select: {
 					style: 'os',
 					selector: 'td:first-child',
-					headerCheckbox:false
+					headerCheckbox: false
 				}
 			});
 		});
@@ -118,7 +133,8 @@
 	<main class="main">
 
 		<!-- Page Title -->
-		<div class="page-title" data-aos="fade" style="background-image: url(https://www.fju.edu.tw/showImg/subLabelImg/1_10_25_9.jpg);">
+		<div class="page-title" data-aos="fade"
+			style="background-image: url(https://www.fju.edu.tw/showImg/subLabelImg/1_10_25_9.jpg);">
 			<div class="container position-relative">
 				<h1>繳費</h1>
 			</div>
@@ -127,7 +143,7 @@
 		<!-- Starter Section Section -->
 		<section id="starter-section" class="starter-section section">
 			<div class="container" data-aos="fade-up">
-				<table id="myTable"  class="stripe row-border order-column nowrap" width="100%">
+				<table id="myTable" class="stripe row-border order-column nowrap" width="100%">
 					<thead>
 						<td></td>
 						<td>預約記錄發生日</td>
@@ -159,12 +175,12 @@
 							<td>微流體電泳分析儀</td>
 							<td>1</td>
 						</tr>
-						
+
 					</tbody>
 				</table>
 				<button id="buttonPay">繳費</button>
 			</div>
-			
+
 
 		</section><!-- /Starter Section Section -->
 

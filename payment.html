@@ -59,10 +59,10 @@
 			border: 1px gray solid;
 			color: aliceblue;
 			position: relative;
-			justify-self: center;
-			width: 100px;
+			width: 150px;
 			border-radius: 3px;
 			margin: 20px;
+			height: 50px;
 		}
 		body * {
 			font-family: '微軟正黑體';
@@ -178,7 +178,11 @@
 
 					</tbody>
 				</table>
-				<button id="buttonPay">繳費</button>
+				<div style="justify-self: center;">
+					<button id="print"  onclick="window.print()">列印現場繳費</button>
+					<a><button id="transfer" onclick="alert('Oops! 好像哪裡出錯了 現在不能轉帳喔')">轉帳</button></a>
+				</div>
+				
 			</div>
 
 

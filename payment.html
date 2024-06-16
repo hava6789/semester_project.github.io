@@ -97,7 +97,17 @@
 					headerCheckbox: false
 				}
 			});
+
 		});
+		function printDiv(divName) {
+			
+			var printContents = document.getElementById(divName).innerHTML;
+			
+			w=window.open();
+			w.document.write(printContents);
+			w.print();
+			w.close();
+		}
 	</script>
 	<header id="header" class="header d-flex align-items-center fixed-top">
 		<div class="container-fluid container-xl position-relative d-flex align-items-center">
@@ -179,7 +189,7 @@
 					</tbody>
 				</table>
 				<div style="justify-self: center;">
-					<button id="print"  onclick="window.print()">列印現場繳費</button>
+					<button id="print"  onclick="printDiv('myTable')">列印現場繳費</button>
 					<a><button id="transfer" onclick="alert('Oops! 好像哪裡出錯了 現在不能轉帳喔')">轉帳</button></a>
 				</div>
 				

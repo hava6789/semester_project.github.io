@@ -2053,7 +2053,7 @@ section,
 
 
 html {
-  background-color: #56baed;
+  background-color: #ffffff;
 }
 
 body {
@@ -2095,7 +2095,7 @@ h2 {
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
-  background: #fff;
+  background: #7ff391;
   padding: 30px;
   width: 90%;
   max-width: 450px;
@@ -2133,7 +2133,7 @@ h2.active {
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
+  background-color: #ffffff;
   border: none;
   color: white;
   padding: 15px 80px;
@@ -2258,7 +2258,7 @@ input[type=text]:placeholder {
 
 .fadeIn.first {
   font-size: large;
-  background-color: #56badd;
+  background-color: #5cded5;
   -webkit-animation-delay: 0.4s;
   -moz-animation-delay: 0.4s;
   animation-delay: 0.4s;
@@ -2268,18 +2268,21 @@ input[type=text]:placeholder {
   -webkit-animation-delay: 0.6s;
   -moz-animation-delay: 0.6s;
   animation-delay: 0.6s;
+  height: 50px;
 }
 
 .fadeIn.third {
   -webkit-animation-delay: 0.8s;
   -moz-animation-delay: 0.8s;
   animation-delay: 0.8s;
+  height: 50px;
 }
 
 .fadeIn.fourth {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s;
+  background-color: #12d178;
 }
 
 /* Simple CSS3 Fade-in Animation */
@@ -2289,7 +2292,7 @@ input[type=text]:placeholder {
   bottom: -10px;
   width: 0;
   height: 2px;
-  background-color: #56baed;
+  background-color: #53e7ecec;
   content: "";
   transition: width 0.2s;
 }
@@ -2313,3 +2316,7 @@ input[type=text]:placeholder {
 #icon {
   width:60%;
 }
+
+
+
+

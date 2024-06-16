@@ -29,7 +29,10 @@
 	<link href="./assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
 	
-
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
 	<!-- Main CSS File -->
 	<link href="assets/css/main.css" rel="stylesheet">
 	
@@ -128,7 +131,11 @@
 			background-color:rgb(0, 94, 94) ;
 			color:white ;
 		}
-		
+
+		.overflow{
+			max-height: 200px;
+			overflow-y: auto;
+		}
 	</style>
 	
 </head>
@@ -147,16 +154,41 @@
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
 
-	<script>
+	<script type="text/javascript">
 		$(function () {
 			// $( "#datepicker" ).datepicker();
 			$("#equipmentName").selectmenu();
-			// $('input[name="returnDate"]').change($(function(){
-				
-			// }))
-				
+			$('input[id="submit"]').click(function(event){
+                //event.preventDefault(); // 阻止默認的表單提交行為
+
+                var borrowDate = $('input[name="borrowDate"]').val();
+                var returnDate = $('input[name="returnDate"]').val();
+
+                if (new Date(borrowDate) > new Date(returnDate)) {
+                    alert("歸還日期不可以早於借出日期");
+                    $('form[id="outerForm"]')[0].reset();
+                } else {
+                    $('form[id="outerForm"]').submit();
+                }
+            });
+		
+			var d = new Date();
+		
+			// Set the value of the "date" field
+			document.getElementById("date").value = d.toDateString();
+		
+			// Set the value of the "time" field
+			var hours = d.getHours();
+			var mins = d.getMinutes();
+			var seconds = d.getSeconds();
+			document.getElementById("time").value = hours + ":" + mins + ":" + seconds;
+
 			
 		});
+		$( "#equipmentName" )
+			.selectmenu()
+			.selectmenu( "menuWidget" )
+			.addclass("overflow");
 	</script>
 	
 	<header id="header" class="header d-flex align-items-center fixed-top">
@@ -203,38 +235,94 @@
 		<!-- Starter Section Section -->
 		<section id="starter-section" class="starter-section section" style="display: grid;">
 
-			<form  style="display: grid;">
+			<form  style="display: grid;" id="outerForm">
 				<div id="reserveForm">
 					<div class="FormInsideWrapper">
 						<label>借出日期 : </label>
 						<div>
-							<input type="date" name="borrowDate" required >
+							<input type="date" name="borrowDate" id="borrowDate" required >
 						</div>		
 					</div>
 					<div class="FormInsideWrapper">
 						<label>借出時間 : </label>
 						<div>
-							<input type="time" name="borrowTime"  step="3600" value="09:00" min="09:00" max="16:00" required/>
+							<input type="time" name="borrowTime" id="borrowTime" step="3600" value="09:00" min="09:00" max="16:00" required/>
 						</div>
 					</div>
 					<div class="FormInsideWrapper">
 						<label>歸還日期 : </label>
 						<div>
-							<input type="date" name="returnDate" required >
+							<input type="date" name="returnDate" id="returnDate" required >
 						</div>		
 					</div>
 					<div class="FormInsideWrapper">
 						<label>歸還時間 : </label>
 						<div>
-							<input type="time" name="returnTime" step="3600" value="09:00" min="09:00" max="16:00" required/>
+							<input type="time" name="returnTime" id="returnTime" step="3600" value="09:00" min="09:00" max="16:00" required/>
 						</div>
 					</div>
 					<div class="FormInsideWrapper">
 						<label>儀器名稱 : </label>
 						<div>
 							<select name="equipmentName" id="equipmentName">
-								<option>1</option>
-								<option>2</option>
+								<optgroup label="藝術學院">
+									<option>Nuage數位多媒體整合系統</option>
+									<option>史坦威鋼琴</option>
+									<option>大圖掃圖機</option>
+								</optgroup>
+								
+								<optgroup label="教育學院">
+									<option>加壓冷療恢復機</option>
+									<option>攜帶式能量代謝系統</option>
+									<option>測力板</option>
+									<option>等速肌力測試評估儀</option>
+									<option>高精度無線腦波系統</option>
+								</optgroup>
+								
+								<optgroup label="醫學院">
+									<option>ImageXpress Micro 高內含影像分析系統</option>
+									<option>Luminex 200多功能螢光生物分子多重分析系統</option>
+									<option>全方位智慧型電流輸出電轉殖儀</option>
+									<option>動物學習與記憶測試組</option>
+									<option>呼吸模擬器組</option>
+									<option>微流體電泳分析儀</option>
+									<option>微電極陣列電生理系統</option>
+									<option>成人全功能型呼吸器</option>
+									<option>次世代高通量核酸定序系統(超高速半導體基因定序儀)</option>
+									<option>穿透式電子顯微鏡</option>
+									<option>血管顯微影像觀察紀錄系統</option>
+									<option>高速流式細胞分選儀</option>
+								</optgroup>
+								
+								<optgroup label="理工學院">
+									<option>三維生物列印機</option>
+									<option>動態機械性質分析儀</option>
+									<option>原子放光光譜儀</option>
+									<option>多模式微波反應系統</option>
+									<option>影像轉檔分析軟體、逆向工程軟體</option>
+									<option>拉曼系統</option>
+									<option>毛細管電泳儀</option>
+									<option>氣相質量選擇偵測器</option>
+									<option>流式細胞儀</option>
+									<option>流式細胞分析儀</option>
+									<option>雷射掃描共軛焦分光光譜顯微平台</option>
+									<option>高階數位示波器</option>
+								</optgroup>
+								
+								<optgroup label="民生學院">
+									<option>ST-5流動層逆洗式噴霧乾燥造粒機</option>
+									<option>多色螢光與冷光影像系統</option>
+									<option>桌上型掃描電子顯微鏡</option>
+									<option>聚合酶連鎖反應分析儀</option>
+									<option>豆腐系統製造設備（含包裝）</option>
+								</optgroup>
+								
+								<optgroup label="織品服裝學院">
+									<option>液態水分管理測試儀</option>
+									<option>電腦輔助橫編機設計系統</option>
+									<option>電腦鞋面橫編機設計系統</option>
+								</optgroup>
+
 							</select>
 						</div>
 					</div>
@@ -250,6 +338,8 @@
 					<input type="submit" id="submit" value="提交表單" style="width: fit-content;"/>
 				</div>
 				<input type="hidden" name="username" />
+				<input type="hidden" id="date"/>
+				<input type="hidden" id="time"/>
 			</form>
 			
 		</section>
@@ -301,6 +391,14 @@
 	<!-- Preloader -->
 	<div id="preloader"></div>
 
+	<script>
+		$(function() {
+            $("#equipmentName")
+                .selectmenu()
+                .selectmenu("menuWidget")
+                .addClass("overflow");
+        });
+	</script>
 	
 	<!-- Main JS File -->
 	<script src="./assets/js/main.js"></script>

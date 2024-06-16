@@ -1,6 +1,7 @@
 # semester_project.github.io
 ## index.html--登入 郭
 裡面要包含註冊頁面(register.html)的連結，忘記密碼(getPassward)的連結
+管理員的帳號密碼:123  密碼:456
 ## register.html--註冊 郭
 ## getPassward--忘記密碼 郭
 ## about.html--個人首頁 郭

@@ -31,15 +31,51 @@
 	<!-- Main CSS File -->
 	<link href="assets/css/main.css" rel="stylesheet">
 
+	<!-- Java Script -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+	<style>
+		input[type=text], input[type=password] {
+			background-color: #f6f6f6;
+			border: none;
+			color: #0d0d0d;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 5px;
+			width: 85%;
+			border: 2px solid #f6f6f6;
+			-webkit-transition: all 0.5s ease-in-out;
+			-moz-transition: all 0.5s ease-in-out;
+			-ms-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;
+			-webkit-border-radius: 5px 5px 5px 5px;
+			border-radius: 5px 5px 5px 5px;
+		}
+	</style>
+
 	<script>
-		$(document).ready(function(){
-			$("#login").click(function(){
-				if(($("#username") == 123) && ($("#passward") == 456) ){
-					alert("suc")
-					location.href="./admin.html";
-				}
-			});
-		});
+		// $(document).ready(function(){
+		// 	$("#login").click(function(){
+		// 		if(($("#username") == 123) && ($("#passward") == 456) ){
+		// 			alert("suc")
+		// 			location.href="./admin.html";
+		// 		}
+		// 	});
+		// });
+		function myfunction(){
+            if (($('input[name="username"]').val() == "123") && ($('input[name="password"]').val() == "456")) {
+                location.href = "./admin.html";
+            } else {
+                location.href = "./about.html";
+            }
+        }
 	</script>
 
 </head>
@@ -93,11 +129,10 @@
 
 					<!-- Login Form -->
 					<form>
-						<input type="text" id="username" class="fadeIn second" name="login" placeholder="帳號">
-						<input type="text" id="password" class="fadeIn third" name="login" placeholder="密碼">
+						<input type="text" id="username" class="fadeIn second" name="username" placeholder="帳號">
+						<input type="password" id="password" class="fadeIn third" name="password" placeholder="密碼">
 						<a class="underlineHover" href="./getPassward.html">忘記密碼?</a> <br>
-						<input type="submit" class="fadeIn fourth" value="登入" id="login">
-
+						<input type="button" class="fadeIn fourth" value="登入" id="login" onclick="myfunction()">
 					</form>
 
 					<!-- Remind Passowrd -->
